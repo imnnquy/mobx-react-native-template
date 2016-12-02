@@ -8,4 +8,4 @@ class RNBase extends React.Component {
   }
 }
 
-AppRegistry.registerComponent('mobx_react_native_template', () => RNBase)
+AppRegistry.registerComponent('Loyalty', () => RNBase)
