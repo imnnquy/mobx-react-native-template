@@ -1,4 +1,4 @@
 export default {
   // required: API base url
-  apiBaseURL: 'http://example.com',
+  apiBaseURL: 'http://localhost:4567',
 }
