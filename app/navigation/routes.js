@@ -1,12 +1,16 @@
+import WelcomeScreen from '../containers/welcome_screen'
+import counterStore from '../stores/counter_store'
+import CheckinScreen from '../containers/checkin_screen'
+
 export default new class Routes {
   get WelcomeScreen () {
     return {
       title: 'Home',
       showTabBar: true,
       hideBackButton: true,
-      component: require('../containers/welcome_screen').default,
+      component: WelcomeScreen,
       store: {
-        counterStore: require('../stores/counter_store').default,
+        counterStore: counterStore,
       }
     }
   }
@@ -16,7 +20,7 @@ export default new class Routes {
       title: 'Checkin',
       showTabBar: true,
       hideBackButton: true,
-      component: require('../containers/checkin_screen').default,
+      component: CheckinScreen,
     }
   }
 

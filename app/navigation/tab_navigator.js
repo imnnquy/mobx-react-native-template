@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import STabNavigator from 'react-native-tab-navigator'
 import { observer } from 'mobx-react/native'
 
@@ -37,28 +37,28 @@ export default class TabNavigator extends Component {
         <STabNavigator.Item
           selected={this.props.tabStore.selected === 'welcome'}
           title="Home"
-          renderIcon={() => <Image source={require('../images/home.png')} style={{width: 24, height: 24}}/>}
+          renderIcon={() => <Image source={require('../images/home.png')} style={navStyle.iconStyle} />}
           onPress={() => this.selectTab('welcome')}>
           {this.props.view}
         </STabNavigator.Item>
         <STabNavigator.Item
           selected={this.props.tabStore.selected === 'checkin'}
           title="Checkin"
-          renderIcon={() => <Image source={require('../images/checkin.png')} style={{width: 24, height: 24}}/>}
+          renderIcon={() => <Image source={require('../images/checkin.png')} style={navStyle.iconStyle} />}
           onPress={() => this.selectTab('checkin')}>
           {this.props.view}
         </STabNavigator.Item>
         <STabNavigator.Item
           selected={this.props.tabStore.selected === 'task'}
           title="Task"
-          renderIcon={() => <Image source={require('../images/task.png')} style={{width: 24, height: 24}}/>}
+          renderIcon={() => <Image source={require('../images/task.png')} style={navStyle.iconStyle} />}
           onPress={() => this.selectTab('task')}>
           {this.props.view}
         </STabNavigator.Item>
         <STabNavigator.Item
           selected={this.props.tabStore.selected === 'profile'}
           title="Profile"
-          renderIcon={() => <Image source={require('../images/profile.png')} style={{width: 24, height: 24}}/>}
+          renderIcon={() => <Image source={require('../images/profile.png')} style={navStyle.iconStyle} />}
           onPress={() => this.selectTab('profile')}>
           {this.props.view}
         </STabNavigator.Item>
@@ -66,3 +66,11 @@ export default class TabNavigator extends Component {
     )
   }
 }
+
+const navStyle = StyleSheet.create({
+    iconStyle: {
+      width: 24,
+      height: 24
+    }
+  }
+)
