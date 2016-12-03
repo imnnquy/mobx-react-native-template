@@ -1,12 +1,12 @@
 import WelcomeScreen from '../containers/welcome_screen'
 import counterStore from '../stores/counter_store'
 import CheckinScreen from '../containers/checkin_screen'
+import MainScreen from '../containers/main_screen'
 
 export default new class Routes {
   get WelcomeScreen () {
     return {
       title: 'Home',
-      showTabBar: true,
       hideBackButton: true,
       component: WelcomeScreen,
       store: {
@@ -15,46 +15,51 @@ export default new class Routes {
     }
   }
 
-  get CheckinScreen () {
+  get MainScreen () {
     return {
-      title: 'Checkin',
-      showTabBar: true,
+      title: 'Loyalty',
       hideBackButton: true,
-      component: CheckinScreen,
+      component: MainScreen,
     }
   }
 
-  get TaskScreen () {
+  get RecentPurchasesScreen () {
     return {
-      title: 'Task',
-      showTabBar: true,
-      hideBackButton: true,
+      title: 'RecentPurchasesScreen',
       component: require('../containers/task_screen').default,
     }
   }
 
-  get ProfileScreen () {
+  get CurrentOffersScreen () {
     return {
-      title: 'Profile',
-      showTabBar: true,
-      hideBackButton: true,
+      title: 'CurrentOffersScreen',
       component: require('../containers/profile_screen').default,
     }
   }
 
-  get SecondScreen () {
+  get RewardPointsScreen () {
     return {
-      title: 'Second Screen',
+      title: 'Reward points',
       component: require('../containers/second_screen').default,
     }
   }
 
-  get CounterScreen () {
+  get RewardsCardScreen () {
     return {
-      title: 'Counter Screen',
+      title: 'Rewards card',
       component: require('../containers/counter_screen').default,
       store: {
-        counterStore: require('../stores/counter_store').default,
+        counterStore: counterStore,
+      }
+    }
+  }
+
+  get AccountInformationScreen () {
+    return {
+      title: 'Account information',
+      component: require('../containers/counter_screen').default,
+      store: {
+        counterStore: counterStore,
       }
     }
   }

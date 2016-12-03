@@ -7,9 +7,8 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import ApplicationStyles from '../styles'
 
 @observer
-export default class WeclomeScreen extends Component {
+export default class MainScreen extends Component {
   static propTypes = {
-    counterStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired
   }
 
@@ -20,8 +19,21 @@ export default class WeclomeScreen extends Component {
         <Text style={styles.text} >
           Weclome to Mobx React Native Template
         </Text>
-        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.MainScreen) }>
-          Click to MainScreen
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.RecentPurchasesScreen) }>
+          RecentPurchasesScreen
+        </Button>
+
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.RewardPointsScreen) }>
+          RewardPointsScreen
+        </Button>
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.RewardsCardScreen) }>
+          RewardsCardScreen
+        </Button>
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.CurrentOffersScreen) }>
+          CurrentOffersScreen
+        </Button>
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.AccountInformationScreen) }>
+        AccountInformationScreen
         </Button>
       </View>
     )

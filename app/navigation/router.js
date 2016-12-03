@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, TouchableOpacity } from 'react-native'
 import NavigationBar from 'react-native-navbar'
-import TabNavigator from './tab_navigator'
 import tabStore from '../stores/tab_store'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -27,9 +26,6 @@ export default {
 
     let view = <route.component {...route.store} navigator={navigator}/>;
 
-    if(route.showTabBar){
-      view = <TabNavigator tabStore={tabStore} view={view} navigator={navigator}/>;
-    }
     return (
       <View style={{ flex: 1 }}>
         <NavigationBar title={titleConfig} leftButton={leftButtonConfig} style={{backgroundColor: '#eee'}} statusBar={{tintColor: '#eee'}}/>
