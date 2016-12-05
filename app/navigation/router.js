@@ -3,6 +3,7 @@ import { View, TouchableOpacity } from 'react-native'
 import NavigationBar from 'react-native-navbar'
 import tabStore from '../stores/tab_store'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import ApplicationStyles from '../styles'
 
 export default {
   renderScene (route, navigator) {
@@ -14,7 +15,7 @@ export default {
 
     const renderLeftButton = () => {
       return (
-        <TouchableOpacity style={{flexDirection: 'row', paddingHorizontal: 15, alignItems: 'center'}} onPress={ ()=>{ navigator.pop() }}>
+        <TouchableOpacity style={ApplicationStyles.touchableOpacity} onPress={ ()=>{ navigator.pop() }}>
           <Icon name="angle-left" size={25} />
         </TouchableOpacity>
       )

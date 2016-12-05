@@ -17,7 +17,7 @@ export default class MainScreen extends Component {
       <View style={styles.container}>
         <Icon style={styles.welcome} name="home" size={30} />
         <Text style={styles.text} >
-          Weclome to Mobx React Native Template
+          Weclome Karen Berg
         </Text>
         <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.RecentPurchasesScreen) }>
           RecentPurchasesScreen

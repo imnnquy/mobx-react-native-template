@@ -6,7 +6,7 @@ import ApplicationStyles from '../styles'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 @observer
-export default class CounterScreen extends Component {
+export default class AccountInformationScreen extends Component {
 
   static propTypes = {
     counterStore: PropTypes.object.isRequired,
@@ -18,7 +18,7 @@ export default class CounterScreen extends Component {
       <View style={styles.container}>
         <Icon style={styles.welcome} name='building' size={30}></Icon>
         <Text style={styles.text}>
-          Counter Container Test
+          Account information
         </Text>
         <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.counterStore.counter}</Text> times</Text>
         <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.increment()}>

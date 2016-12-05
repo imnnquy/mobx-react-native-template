@@ -1,17 +1,17 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
-import Routes from '../navigation/routes'
-import { observer } from 'mobx-react/native'
 
-@observer
-export default class ProfileScreen extends Component {
+export default class RewardPointsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome} >
-          ProfileScreen
+        <Text style={styles.welcome}>
+          Reward points
         </Text>
+        <Button style={styles.instructions} onPress={ ()=> this.props.navigator.pop() }>
+          Back to Prev Screen
+        </Button>
       </View>
     )
   }

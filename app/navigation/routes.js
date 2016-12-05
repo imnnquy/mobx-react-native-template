@@ -1,14 +1,14 @@
-import WelcomeScreen from '../containers/welcome_screen'
+import LoginScreen from '../containers/login_screen'
 import counterStore from '../stores/counter_store'
 import CheckinScreen from '../containers/checkin_screen'
 import MainScreen from '../containers/main_screen'
 
 export default new class Routes {
-  get WelcomeScreen () {
+  get LoginScreen () {
     return {
-      title: 'Home',
+      title: 'Login',
       hideBackButton: true,
-      component: WelcomeScreen,
+      component: LoginScreen,
       store: {
         counterStore: counterStore,
       }
@@ -25,29 +25,29 @@ export default new class Routes {
 
   get RecentPurchasesScreen () {
     return {
-      title: 'RecentPurchasesScreen',
-      component: require('../containers/task_screen').default,
+      title: 'Recent Purchases',
+      component: require('../containers/recent_purchases_screen').default,
     }
   }
 
   get CurrentOffersScreen () {
     return {
-      title: 'CurrentOffersScreen',
-      component: require('../containers/profile_screen').default,
+      title: 'Current Offers',
+      component: require('../containers/current_offers_screen').default,
     }
   }
 
   get RewardPointsScreen () {
     return {
       title: 'Reward points',
-      component: require('../containers/second_screen').default,
+      component: require('../containers/reward_points_screen').default,
     }
   }
 
   get RewardsCardScreen () {
     return {
       title: 'Rewards card',
-      component: require('../containers/counter_screen').default,
+      component: require('../containers/reward_card_screen').default,
       store: {
         counterStore: counterStore,
       }
@@ -57,7 +57,7 @@ export default new class Routes {
   get AccountInformationScreen () {
     return {
       title: 'Account information',
-      component: require('../containers/counter_screen').default,
+      component: require('../containers/account_information_screen').default,
       store: {
         counterStore: counterStore,
       }

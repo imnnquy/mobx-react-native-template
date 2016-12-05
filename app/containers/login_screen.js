@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import ApplicationStyles from '../styles'
 
 @observer
-export default class WeclomeScreen extends Component {
+export default class LoginScreen extends Component {
   static propTypes = {
     counterStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired
@@ -18,32 +18,12 @@ export default class WeclomeScreen extends Component {
       <View style={styles.container}>
         <Icon style={styles.welcome} name="home" size={30} />
         <Text style={styles.text} >
-          Weclome to Mobx React Native Template
+          Weclome to Loyalty
         </Text>
-        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.MainScreen) }>
-          Click to MainScreen
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.immediatelyResetRouteStack([Routes.MainScreen]) }>
+          Click to Login
         </Button>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    textAlign: 'center',
-    margin: 10,
-    marginTop: 100
-  },
-  text: {
-    textAlign: 'center',
-    margin: 10,
-  },
-  textRed: {
-    color: 'red',
-  },
-});

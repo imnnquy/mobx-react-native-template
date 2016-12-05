@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
+import Routes from '../navigation/routes'
+import { observer } from 'mobx-react/native'
 
-export default class SecondScreen extends Component {
+@observer
+export default class RecentPurchasesScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Second Screen Container
+        <Text style={styles.welcome} >
+          RecentPurchasesScreen
         </Text>
-        <Button style={styles.instructions} onPress={ ()=> this.props.navigator.pop() }>
-          Back to Prev Screen
-        </Button>
       </View>
     )
   }
