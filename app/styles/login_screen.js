@@ -6,7 +6,6 @@ const LoginStyle = {
       flexDirection: 'column',
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center',
       width: null,
       height: null
     },
