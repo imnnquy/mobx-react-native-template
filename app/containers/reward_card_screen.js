@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class RewardsCardScreen extends Component {
 
   static propTypes = {
-    counterStore: PropTypes.object.isRequired,
+    userStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired,
   }
 
@@ -20,11 +20,11 @@ export default class RewardsCardScreen extends Component {
         <Text style={styles.text}>
           Rewards card
         </Text>
-        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.counterStore.counter}</Text> times</Text>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.increment()}>
+        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.userStore.counter}</Text> times</Text>
+        <Button style={ApplicationStyles.button} onPress={() => this.props.userStore.increment()}>
           |   +1   |
         </Button>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.incrementAsync()}>
+        <Button style={ApplicationStyles.button} onPress={() => this.props.userStore.incrementAsync()}>
           |   +1 async  |
         </Button>
         <Button onPress={ ()=> this.props.navigator.pop() }>

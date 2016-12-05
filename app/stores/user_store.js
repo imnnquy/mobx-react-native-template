@@ -1,7 +1,7 @@
 import {observable} from 'mobx'
 import api from './api'
 
-class CounterStore {
+class UserStore {
   @observable counter = 0;
   @observable remoteCounter = 0;
 
@@ -33,6 +33,6 @@ class CounterStore {
   }
 }
 
-const counterStore = new CounterStore;
+const userStore = new UserStore;
 
-export default counterStore;
+export default userStore;

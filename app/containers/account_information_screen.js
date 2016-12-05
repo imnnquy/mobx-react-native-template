@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class AccountInformationScreen extends Component {
 
   static propTypes = {
-    counterStore: PropTypes.object.isRequired,
+    UserStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired,
   }
 
@@ -20,11 +20,11 @@ export default class AccountInformationScreen extends Component {
         <Text style={styles.text}>
           Account information
         </Text>
-        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.counterStore.counter}</Text> times</Text>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.increment()}>
+        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.UserStore.counter}</Text> times</Text>
+        <Button style={ApplicationStyles.button} onPress={() => this.props.UserStore.increment()}>
           |   +1   |
         </Button>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.incrementAsync()}>
+        <Button style={ApplicationStyles.button} onPress={() => this.props.UserStore.incrementAsync()}>
           |   +1 async  |
         </Button>
         <Button onPress={ ()=> this.props.navigator.pop() }>

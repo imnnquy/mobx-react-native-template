@@ -1,3 +1,6 @@
+import LoginStyle from './login_screen'
+import MainStyle from './main_screen'
+
 const ApplicationStyles = {
   button: {
     margin: 5,
@@ -11,3 +14,4 @@ const ApplicationStyles = {
 }
 
 export default ApplicationStyles
+export { LoginStyle, MainStyle }

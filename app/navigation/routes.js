@@ -1,5 +1,5 @@
 import LoginScreen from '../containers/login_screen'
-import counterStore from '../stores/counter_store'
+import userStore from '../stores/user_store'
 import CheckinScreen from '../containers/checkin_screen'
 import MainScreen from '../containers/main_screen'
 
@@ -8,9 +8,10 @@ export default new class Routes {
     return {
       title: 'Login',
       hideBackButton: true,
+      hideNavBar: true,
       component: LoginScreen,
       store: {
-        counterStore: counterStore,
+        userStore: userStore,
       }
     }
   }
@@ -49,7 +50,7 @@ export default new class Routes {
       title: 'Rewards card',
       component: require('../containers/reward_card_screen').default,
       store: {
-        counterStore: counterStore,
+        userStore: userStore,
       }
     }
   }
@@ -59,7 +60,7 @@ export default new class Routes {
       title: 'Account information',
       component: require('../containers/account_information_screen').default,
       store: {
-        counterStore: counterStore,
+        userStore: userStore,
       }
     }
   }
