@@ -18,7 +18,7 @@ const LoginStyle = {
     signin: {
         backgroundColor: '#FFF',
         padding: 20,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     signup: {
       justifyContent: 'center',
@@ -63,7 +63,8 @@ const LoginStyle = {
     },
     whiteFont: {
       color: '#A93439',
-    }
+    },
+    underlayColor: '#E6E6E6',
 }
 
 export default LoginStyle

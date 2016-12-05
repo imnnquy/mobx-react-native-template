@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Text, View, StyleSheet, Image, TextInput } from 'react-native'
+import { Text, View, StyleSheet, Image, TextInput, TouchableHighlight } from 'react-native'
 import Button from 'react-native-button'
 import Routes from '../navigation/routes'
 import { observer } from 'mobx-react/native'
@@ -11,6 +11,10 @@ export default class LoginScreen extends Component {
   static propTypes = {
     userStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired
+  }
+
+  login() {
+    this.props.navigator.popToTop([Routes.MainScreen])
   }
 
   render() {
@@ -43,9 +47,9 @@ export default class LoginScreen extends Component {
                     <Text style={LoginStyle.greyFont}>Forgot Password</Text>
                 </View>
             </View>
-            <View style={LoginStyle.signin}>
-                <Text style={LoginStyle.whiteFont} onPress={ ()=> this.props.navigator.immediatelyResetRouteStack([Routes.MainScreen]) }>Sign In</Text>
-            </View>
+            <TouchableHighlight underlayColor={LoginStyle.underlayColor} style={LoginStyle.signin} onPress={ this.login.bind(this) }>
+                <Text style={LoginStyle.whiteFont}>Sign In</Text>
+            </TouchableHighlight>
             <View style={LoginStyle.signup}>
             </View>
         </Image>
