@@ -14,7 +14,8 @@ export default class LoginScreen extends Component {
   }
 
   login() {
-    this.props.navigator.popToTop([Routes.MainScreen])
+    let resetScreen = {...Routes.MainScreen, reset: true}
+    this.props.navigator.push(resetScreen)
   }
 
   render() {

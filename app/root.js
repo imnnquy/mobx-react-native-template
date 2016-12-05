@@ -7,8 +7,15 @@ export default class Root extends Component {
   render() {
     return (
       <Navigator
+        ref='navigator'
         initialRoute={Routes.LoginScreen}
         renderScene={Router.renderScene}
+        onDidFocus={(route) => {
+            if (route.reset) {
+              console.log("Reset navigator stack");
+              this.refs.navigator.immediatelyResetRouteStack([Routes.MainScreen])
+            }
+          }}
       />
     );
   }

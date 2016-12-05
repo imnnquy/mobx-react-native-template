@@ -30,7 +30,7 @@ export default {
     if(! route.hideNavBar){
       navBar = <NavigationBar title={titleConfig} leftButton={leftButtonConfig} style={{backgroundColor: '#eee'}} statusBar={{tintColor: '#eee'}}/>
     }
-    
+
 
     return (
       <View style={{ flex: 1 }}>
