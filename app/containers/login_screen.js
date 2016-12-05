@@ -15,15 +15,14 @@ export default class LoginScreen extends Component {
 
   render() {
     return (
-      <View style={LoginStyle.container}>
-            <Image style={LoginStyle.bg} source={require('../images/login/login1_bg.png')} />
+      <Image style={LoginStyle.container} source={require('../images/login/login1_bg.png')} >
             <View style={LoginStyle.header}>
-                <Image style={LoginStyle.mark} source={require('../images/login/login1_mark.png')} />
+                <Image source={require('../images/login/login1_mark.png')} />
             </View>
             <View style={LoginStyle.inputs}>
                 <View style={LoginStyle.inputContainer}>
                     <Image style={LoginStyle.inputUsername} source={require('../images/login/login1_person.png')}/>
-                    <TextInput 
+                    <TextInput
                         style={[LoginStyle.input, LoginStyle.whiteFont]}
                         placeholder="Username"
                         placeholderTextColor="#FFF"
@@ -48,9 +47,8 @@ export default class LoginScreen extends Component {
                 <Text style={LoginStyle.whiteFont} onPress={ ()=> this.props.navigator.immediatelyResetRouteStack([Routes.MainScreen]) }>Sign In</Text>
             </View>
             <View style={LoginStyle.signup}>
-                <Text style={LoginStyle.greyFont}>Don't have an account?<Text style={LoginStyle.whiteFont}>  Sign Up</Text></Text>
             </View>
-        </View>
+        </Image>
     )
   }
 }

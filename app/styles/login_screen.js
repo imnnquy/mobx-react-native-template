@@ -5,14 +5,10 @@ const LoginStyle = {
     container: {
       flexDirection: 'column',
       flex: 1,
-      backgroundColor: 'transparent'
-    },
-    bg: {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: windowSize.width,
-        height: windowSize.height
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: null,
+      height: null
     },
     header: {
         justifyContent: 'center',
@@ -20,12 +16,8 @@ const LoginStyle = {
         flex: .5,
         backgroundColor: 'transparent'
     },
-    mark: {
-        flex: 1,
-        resizeMode: 'contain'
-    },
     signin: {
-        backgroundColor: '#FF3366',
+        backgroundColor: '#FFF',
         padding: 20,
         alignItems: 'center'
     },
@@ -71,7 +63,7 @@ const LoginStyle = {
       color: '#D8D8D8'
     },
     whiteFont: {
-      color: '#FFF'
+      color: '#A93439',
     }
 }
 
